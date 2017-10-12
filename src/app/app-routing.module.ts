@@ -11,12 +11,15 @@ import { AlbumsComponent } from './albums/albums.component';
 import { PhotosComponent } from './photos/photos.component';
 import { TodosComponent } from './todos/todos.component';
 import { UsersComponent } from './users/users.component';
+import { UserDetailComponent } from './users/user-detail.component';
+
 
 const routes: Routes = [
   { path: 'posts',  component: PostsComponent },
   { path: 'albums', component: AlbumsComponent },
   { path: 'comments',     component: CommentsComponent },
   { path: 'users',     component: UsersComponent },
+  { path: 'users/detail/:id', component: UserDetailComponent },
   { path: 'photos',     component: PhotosComponent },
   { path: 'todos',     component: TodosComponent },
 ];

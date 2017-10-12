@@ -1,3 +1,17 @@
-<p>
-  users works!
-</p>
+<div class="users">
+  <div class="row">
+    <div class="user" *ngFor="let user of users">
+      <div class="image">
+      </div>
+      <span class="user-name">
+        {{user.username}}
+      </span>
+      <br>
+      <span class="name">
+        {{user.name}}
+      </span>
+      <br>
+      <button (click)="getDetails(user)">Detalhes</button>
+    </div>
+  </div>
+</div>
