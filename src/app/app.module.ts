@@ -10,6 +10,9 @@ import { TodosComponent } from './todos/todos.component';
 import { UsersComponent } from './users/users.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { HttpModule } from '@angular/http';
+
+import { PostService } from './posts/post.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,10 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

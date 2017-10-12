@@ -1,3 +1,20 @@
-<p>
-  posts works!
-</p>
+<div class="posts">
+  <div class="box" *ngFor="let post of posts">
+    <div class="box-header">
+      <span>{{post.title}}</span>
+    </div>
+    <div class="box-body">
+      <p>{{post.body}}</p>
+    </div>
+    <div class="box-footer">
+      <a (click)="getPostComments(post)">Mostrar comentarios</a>
+
+      <div *ngIf="postComments">
+        <div class="comments" *ngIf="postComments[0].postId === post.id">
+          <p class="email">email</p>
+          <p class="body-comment">asdasd</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
