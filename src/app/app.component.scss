@@ -1,5 +1,7 @@
+$white-color: #fff;
+$black-color: #000;
 .sidebar{
-  padding: 2.7rem 1rem;
+  padding: 2.5rem 1rem;
   width: 15%;
   .box-sidebar{
     border: 1px solid rgba(0,0,0,0.250);
@@ -7,19 +9,24 @@
     transition: box-shadow 0.2s;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: $white-color;
     position: fixed;
     width: 200px;
     a{
       text-decoration: none;
       padding: 15px;
+      color: $black-color;
       border-bottom: 1px solid rgba(0,0,0,0.1);
       &.active:not(focus){
         background-color:#848586;
-        color: white;
+        color: $white-color;
       }
       &:focus{
-        color: black;
+        color: $black-color;
+      }
+      &:hover{
+        background-color:rgba(132, 133, 134, 0.64);;
+        color: $white-color;
       }
     }
 

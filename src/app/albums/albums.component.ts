@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlbumService } from './album.service';
+import { HttpAlbumService as AlbumService } from './http-album.service';
 import { Router } from '@angular/router';
 
 @Component({

@@ -9,21 +9,22 @@ import { url } from '../constants';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class UserService {
+export class HttpPostService {
   private url = url;
 
   constructor(private http: Http) {}
 
-  getUsers() {
-    return this.http.get(`${this.url}/users`)
+  getPosts() {
+    return this.http.get(`${this.url}/posts?_limit=15`)
       .toPromise()
       .then(res => res.json());
   }
 
-  getUser(id: number) {
-    return this.http.get(`${this.url}/users/${id}`)
+  getPostCommets(id: number) {
+    return this.http.get(`${this.url}/posts/${id}/comments`)
       .toPromise()
       .then(res => res.json());
   }
 }
+
 

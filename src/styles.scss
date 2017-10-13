@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+$font-stack:    Arial, sans-serif;
 
 body{
   margin: 0;
   background-color: #ecf0f1;
+  font-family: $font-stack;
 }
 header{
   width: 100%;

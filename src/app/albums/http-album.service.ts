@@ -9,7 +9,7 @@ import { url } from '../constants';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class AlbumService {
+export class HttpAlbumService {
   private url = url;
   constructor(private http: Http) {}
 

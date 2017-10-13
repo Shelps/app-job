@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PostsComponent } from './posts.component';
-import { PostService } from './post.service';
+import { HttpPostService as PostService } from './http-post.service';
 import { HttpModule } from '@angular/http';
 
 describe('PostsComponent', () => {

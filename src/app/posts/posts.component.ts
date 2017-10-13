@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from './post.service';
+import { HttpPostService } from './http-post.service';
 import {Post} from './post';
 
 @Component({
@@ -11,7 +11,7 @@ export class PostsComponent implements OnInit {
   posts: any[];
   postComments: any[];
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: HttpPostService) { }
 
   ngOnInit() {
     this.postService.getPosts()

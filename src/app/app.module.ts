@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {APP_BASE_HREF} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
@@ -11,9 +12,9 @@ import { AlbumDetailComponent } from './albums/album-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
 
-import { PostService } from './posts/post.service';
-import { UserService } from './users/user.service';
-import { AlbumService } from './albums/album.service';
+import { HttpPostService } from './posts/http-post.service';
+import { HttpUserService as UserService } from './users/http-user.service';
+import { HttpAlbumService as AlbumService } from './albums/http-album.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +31,10 @@ import { AlbumService } from './albums/album.service';
     AppRoutingModule
   ],
   providers: [
-    PostService,
+    HttpPostService,
     UserService,
-    AlbumService
+    AlbumService,
+    {provide: APP_BASE_HREF, useValue: '/appjob'}
   ],
   bootstrap: [AppComponent]
 })

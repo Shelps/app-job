@@ -12,6 +12,7 @@ import { UserDetailComponent } from './users/user-detail.component';
 import { AlbumDetailComponent } from './albums/album-detail.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/posts', pathMatch: 'full' },
   { path: 'posts',  component: PostsComponent },
   { path: 'albums', component: AlbumsComponent },
   { path: 'albums/photos/:id', component: AlbumDetailComponent },

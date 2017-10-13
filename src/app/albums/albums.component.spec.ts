@@ -1,9 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AlbumsComponent } from './albums.component';
-import { AlbumService } from './album.service';
+import { HttpAlbumService as AlbumService } from './http-album.service';
 import { HttpModule } from '@angular/http';
 import { Router } from '@angular/router';
+
+class RouterStub {
+  navigateByUrl(url: string) { return url; }
+}
 
 describe('AlbumsComponent', () => {
   let component: AlbumsComponent;
@@ -13,7 +17,10 @@ describe('AlbumsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ AlbumsComponent ],
       imports: [HttpModule],
-      providers: [AlbumService]
+      providers: [
+        AlbumService,
+        { provide: Router, useClass: RouterStub }
+      ]
     })
     .compileComponents();
   }));

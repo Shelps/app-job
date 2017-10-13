@@ -1,8 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UsersComponent } from './users.component';
-import { UserService } from './user.service';
+import { HttpUserService as UserService } from './http-user.service';
 import { HttpModule } from '@angular/http';
+import { Router } from '@angular/router';
+
+class RouterStub {
+  navigateByUrl(url: string) { return url; }
+}
 
 describe('UsersComponent', () => {
   let component: UsersComponent;
@@ -11,7 +16,10 @@ describe('UsersComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ UsersComponent ],
-      providers: [ UserService ],
+      providers: [
+        UserService,
+        { provide: Router, useClass: RouterStub }
+      ],
       imports: [HttpModule]
     })
     .compileComponents();
