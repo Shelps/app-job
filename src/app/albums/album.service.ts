@@ -4,13 +4,13 @@
 
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { url } from '../constants';
 
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class AlbumService {
-  private url = 'https://jsonplaceholder.typicode.com';
-
+  private url = url;
   constructor(private http: Http) {}
 
   getAlbums() {
