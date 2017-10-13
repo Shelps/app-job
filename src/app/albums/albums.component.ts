@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlbumService } from './album.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-albums',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./albums.component.css']
 })
 export class AlbumsComponent implements OnInit {
-
-  constructor() { }
+  albums: any[];
+  constructor(
+    private albumService: AlbumService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.albumService.getAlbums()
+      .then((albums) => this.albums = albums);
+  }
+
+  getPhotos(album) {
+    this.router.navigate(['/albums/photos', album.id]);
   }
 
 }

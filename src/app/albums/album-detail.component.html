@@ -1,0 +1,11 @@
+<div class="album-detail" *ngIf="photos">
+  <button (click)="goBack()">Voltar</button>
+  <div class="row">
+    <div class="photos" *ngFor="let photo of photos">
+      <p>{{photo.title}}</p>
+      <a href="{{photo.url}}" target="_blank">
+        <img src="{{photo.thumbnailUrl}}" height="150px">
+      </a>
+    </div>
+  </div>
+</div>
