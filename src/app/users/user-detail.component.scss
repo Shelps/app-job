@@ -1,0 +1,31 @@
+.detail{
+  .user{
+    border: 1px solid rgba(0,0,0,0.250);
+    border-radius: 2px;
+    width: 600px;
+    margin-top: 1rem;
+    background-color: white;
+    .row{
+      .content-img{
+        flex: 1;
+        margin: 58px;
+        align-self: center;
+        .image{
+          height: 238px;
+          background-color: #ccd4d0;
+          border-radius: 126px;
+          margin-bottom: 1rem;
+        }
+      }
+      .info{
+        flex: 1;
+      }
+    }
+
+    &:hover{
+      -webkit-box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+      -moz-box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+      box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+    }
+  }
+}

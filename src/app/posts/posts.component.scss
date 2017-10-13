@@ -1,0 +1,60 @@
+.posts{
+  .box{
+    width: 600px;
+    border: 1px solid rgba(0,0,0,0.250);
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    transition: box-shadow 0.2s;
+    .box-header,.box-footer,.box-body{
+      padding: .5rem;
+    }
+    .box-body,.box-footer{
+      background-color: white;
+    }
+    .box-header{
+      background-color: #ccd4d0;
+      min-height: 40px;
+      span{
+        font-size: 1.5rem;
+      }
+    }
+
+    .box-body{
+      .comments{
+
+        .email{
+          font-size: 10px;
+        }
+        .body-comment{
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .box-footer{
+      a{
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .comments{
+        .email{
+          font-size: 12px;
+          margin-bottom: 5px;
+        }
+        .body-comment{
+          margin-top: 5px;
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &:hover{
+      -webkit-box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+      -moz-box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+      box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+    }
+  }
+
+}

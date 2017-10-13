@@ -9,10 +9,13 @@
     <div class="box-footer">
       <a (click)="getPostComments(post)">Mostrar comentarios</a>
 
-      <div *ngIf="postComments">
-        <div class="comments" *ngIf="postComments[0].postId === post.id">
-          <p class="email">email</p>
-          <p class="body-comment">asdasd</p>
+      <div *ngIf="postComments" >
+        <div class="comments" *ngIf="postComments[0].postId === post.id" >
+          <div class="comment-box" *ngFor="let postComent of postComments">
+            <p class="email">{{postComent.email}}</p>
+            <p class="body-comment">{{postComent.body}}</p>
+            <hr>
+          </div>
         </div>
       </div>
     </div>

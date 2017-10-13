@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+  margin: 0;
+  background-color: #ecf0f1;
+}
+header{
+  width: 100%;
+  height: 70px;
+  background-color: #535d67;
+}
+
+.row{
+  display: flex;
+}
+
+button{
+  color:#fff;
+  background-color: #6496c8;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+
+
+  &:active, &.active {
+    background-color: #27496d;
+  }
+
+  &:disabled:not(:hover){
+    background: black;
+  }
+}

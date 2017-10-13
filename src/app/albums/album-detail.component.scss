@@ -1,0 +1,41 @@
+.album-detail{
+  button{
+    margin-left: 15px;
+  }
+  .row{
+    flex-wrap: wrap;
+    .photos{
+      background-color: white;
+      width: 200px;
+      min-height: 217px;
+      margin: 1rem;
+      text-align: center;
+      border: 1px solid rgba(0,0,0,0.250);
+      border-radius: 2px;
+      transition: box-shadow 0.2s;
+      p{
+        margin: 0 0 5px 0;
+        padding: 14px;
+        width: 171.5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        background-color: #ccd4d0;
+      }
+
+      a{
+        img{
+          margin: 13px;
+        }
+      }
+
+      &:hover{
+        -webkit-box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+        -moz-box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+        box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+      }
+    }
+
+  }
+}

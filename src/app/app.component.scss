@@ -1,0 +1,40 @@
+.sidebar{
+  padding: 2.7rem 1rem;
+  width: 15%;
+  .box-sidebar{
+    border: 1px solid rgba(0,0,0,0.250);
+    border-radius: 2px;
+    transition: box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    width: 200px;
+    a{
+      text-decoration: none;
+      padding: 15px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      &.active:not(focus){
+        background-color:#848586;
+        color: white;
+      }
+      &:focus{
+        color: black;
+      }
+    }
+
+    &:hover{
+      -webkit-box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+      -moz-box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+      box-shadow: 5px 7px 10px -8px rgba(0,0,0,0.63);
+    }
+  }
+}
+.content{
+  flex:1;
+  padding-top: 30px;
+  .box-content{
+    display: flex;
+    justify-content: center;
+  }
+}

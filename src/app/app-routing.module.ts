@@ -7,7 +7,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PostsComponent } from './posts/posts.component';
 import { AlbumsComponent } from './albums/albums.component';
-import { PhotosComponent } from './photos/photos.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailComponent } from './users/user-detail.component';
 import { AlbumDetailComponent } from './albums/album-detail.component';
@@ -18,7 +17,6 @@ const routes: Routes = [
   { path: 'albums/photos/:id', component: AlbumDetailComponent },
   { path: 'users',     component: UsersComponent },
   { path: 'users/detail/:id', component: UserDetailComponent },
-  { path: 'photos',     component: PhotosComponent },
 ];
 
 @NgModule({

@@ -1,10 +1,13 @@
 <div class="detail" *ngIf="user">
+  <button (click)="goBack()">Voltar</button>
   <div class="user">
-    <div class="info">
-      <div>
+    <div class="row">
+      <div class="content-img">
         <div class="image"></div>
+      </div>
+      <div class="info">
         <p>Nome: {{user.name}}</p>
-        <p>Nome Usuário: {{user.username}}</p>
+        <p>Usuário: {{user.username}}</p>
         <p>Email: {{user.email}}</p>
         <p>Phone: {{user.phone}}</p>
         <p>Web Site: {{user.website}}</p>
@@ -14,7 +17,6 @@
           <p>Rua: {{user.address.street}}</p>
           <p>cep: {{user.address.zipcode}}</p>
         </div>
-
         <div class="company">
           <h3>Empresa</h3>
           <p>Nome: {{user.company.name}}</p>

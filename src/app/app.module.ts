@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
 import { AlbumsComponent } from './albums/albums.component';
-import { PhotosComponent } from './photos/photos.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailComponent } from './users/user-detail.component';
 import { AlbumDetailComponent } from './albums/album-detail.component';
@@ -21,10 +20,9 @@ import { AlbumService } from './albums/album.service';
     AppComponent,
     PostsComponent,
     AlbumsComponent,
-    PhotosComponent,
     UsersComponent,
     UserDetailComponent,
-    AlbumDetailComponent
+    AlbumDetailComponent,
   ],
   imports: [
     BrowserModule,

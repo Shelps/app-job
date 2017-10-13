@@ -1,10 +1,27 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PostsComponent } from './posts/posts.component';
+import { AlbumsComponent } from './albums/albums.component';
+import { UsersComponent } from './users/users.component';
+import { UserDetailComponent } from './users/user-detail.component';
+import { AlbumDetailComponent } from './albums/album-detail.component';
+import { HttpModule } from '@angular/http';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        PostsComponent,
+        AlbumsComponent,
+        UsersComponent,
+        UserDetailComponent,
+        AlbumDetailComponent
+      ],
+      imports: [
+        AppRoutingModule,
+        HttpModule
       ],
     }).compileComponents();
   }));
