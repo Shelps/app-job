@@ -14,7 +14,7 @@ export class PostService {
   constructor(private http: Http) {}
 
   getPosts() {
-    return this.http.get(`${this.url}/posts`)
+    return this.http.get(`${this.url}/posts?_limit=15`)
       .toPromise()
       .then(res => res.json());
   }

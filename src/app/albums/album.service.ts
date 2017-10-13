@@ -14,7 +14,7 @@ export class AlbumService {
   constructor(private http: Http) {}
 
   getAlbums() {
-    return this.http.get(`${this.url}/albums`)
+    return this.http.get(`${this.url}/albums?_limit=15`)
       .toPromise()
       .then(res => res.json());
   }
